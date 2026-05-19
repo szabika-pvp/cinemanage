@@ -1,0 +1,101 @@
+VetítésID;TeremNév;FilmCíme;Eladott_Jegyek_db;JegyÁr_Ft
+1;B;Chill Factor;54;3213
+2;G;Cradle of Fear;8;3459
+3;I;When Nietzsche Wept;21;2610
+4;A;Bakeneko: A Vengeful Spirit (Kaibyô nori no numa) (Ghost-Cat Cursed Pond, The);51;2751
+5;G;Decoding Annie Parker;8;3637
+6;B;Heartbreakers;40;2246
+7;J;Trouble with Harry, The;9;2983
+8;E;I Love You Again;1;3322
+9;I;Crossing the Bridge: The Sound of Istanbul;11;2598
+10;A;Serbian Film, A (Srpski film);54;2667
+11;C;The Little Rascals Save the Day;49;2938
+12;J;Insomnia;49;2771
+13;G;House of Games;6;2752
+14;C;Descent, The;32;2398
+15;F;Forever Amber;39;3267
+16;G;Dance with the Devil (Perdita Durango);12;2272
+17;J;Desperados, The;25;2148
+18;E;Doll, The (Lalka);21;3754
+19;D;Demon Lover Diary;30;2991
+20;D;Godzilla: Final Wars (Gojira: Fainaru uôzu);31;3181
+21;I;Two Guys Talkin' About Girls;32;2768
+22;A;Penitentiary II;24;2935
+23;E;Snowtown (Snowtown Murders, The);12;2879
+24;A;Samurai III: Duel on Ganryu Island (a.k.a. Bushido) (Miyamoto Musashi kanketsuhen: kettô Ganryûjima);29;3240
+25;J;Dead Man's Burden;40;2334
+26;C;Reds;12;2509
+27;H;Collapse;37;2856
+28;D;The Legend of Awesomest Maximus;6;2491
+29;C;Born Wild;31;2996
+30;F;Cannibal! The Musical (a.k.a. Alferd Packer: The Musical);7;2339
+31;J;Rise of the Footsoldier;3;2690
+32;B;Prince of Tides, The;37;3668
+33;G;Brokedown Palace;47;3511
+34;B;Jimmy Rosenberg: The Father, the Son & the Talent;3;3863
+35;F;Blackout;14;2334
+36;E;Abelar: Tales of an Ancient Empire (Tales of an Ancient Empire);9;3339
+37;G;Stranger Than Paradise;6;3654
+38;F;Hawaii, Oslo;29;2793
+39;A;Bus 174 (Ônibus 174);5;2873
+40;C;Pathfinder;32;3298
+41;G;Villain, The (Le Vilain);38;3690
+42;C;Bay of Blood (a.k.a. Twitch of the Death Nerve) (Reazione a catena);4;2291
+43;G;Paths of Hate;48;2892
+44;F;Promised Life, The (Vie promise, La);43;2881
+45;J;To Paint or Make Love (Peindre ou faire l'amour);39;2097
+46;E;Cinderella II: Dreams Come True;21;3572
+47;C;All Through the Night;33;2504
+48;I;Less Than Zero;40;2263
+49;E;Moon;32;3353
+50;J;Born to Be Bad;4;2144
+51;A;Mimic: Sentinel;37;2914
+52;F;Bad Day on the Block;23;3708
+53;E;Cat's-Paw, The;17;2651
+54;G;Interrupters, The;24;2642
+55;H;In Like Flint;33;2232
+56;F;Red Shoes, The (Bunhongsin);40;3628
+57;F;Animal Crackers;33;3356
+58;E;Cypher;47;2205
+59;B;Umberto D.;3;2603
+60;B;Virgin Spring, The (Jungfrukällan);50;3861
+61;B;Chronicle of the Years of Fire (Chronique des années de braise);45;2473
+62;D;If a Man Answers;20;3060
+63;H;Eight Iron Men;34;3329
+64;A;Call of Cthulhu, The;2;3654
+65;G;Hop;52;3643
+66;H;Seance on a Wet Afternoon;29;3509
+67;G;War of the Wildcats (In Old Oklahoma);50;2805
+68;E;Ragnarok;37;2074
+69;D;Arctic Tale;43;3127
+70;B;Most Wanted;7;3858
+71;A;Anatomy of a Love Seen;34;2168
+72;H;Julia's Eyes (Ojos de Julia, Los);22;3454
+73;E;Casanova Brown;46;2326
+74;C;Scent of a Woman (Profumo di donna);8;3114
+75;J;Scotland, Pa.;47;3071
+76;C;Suspect X (Yôgisha X no kenshin);39;3865
+77;J;Starbuck;49;2421
+78;C;Sister Kenny;39;3639
+79;J;Shoot to Kill;14;2634
+80;I;Bigga Than Ben;50;3312
+81;B;You Killed Me First;20;2012
+82;I;Blood River;29;2536
+83;I;Gate, The;11;2823
+84;G;Safety Not Guaranteed;11;2374
+85;E;Here Comes the Navy;30;3581
+86;H;On the Run;42;3018
+87;I;At Any Second (In jeder Sekunde);25;2065
+88;A;The Violent Professionals;30;2742
+89;J;Man on the Flying Trapeze;45;2750
+90;A;Animal Kingdom;41;2961
+91;G;Far Side of the Moon, The (Face cachée de la lune, La);36;2069
+92;D;Alexander's Ragtime Band;51;3313
+93;F;Head-On (Gegen die Wand);29;3489
+94;H;Safe Sex;23;3073
+95;E;Face of Terror;49;3967
+96;E;Invisible, The;11;2660
+97;G;Venus;48;2424
+98;E;Oedipus Rex (Edipo re);26;2051
+99;G;Switchback;18;3918
+100;F;Return to Me;49;2577

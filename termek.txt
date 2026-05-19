@@ -1,0 +1,11 @@
+TeremNév;Férőhelyek_száma;VászonTípusa
+A;70;IMAX
+B;95;2D
+C;85;IMAX
+D;56;2D
+E;63;IMAX
+F;61;2D
+G;80;IMAX
+H;72;2D
+I;54;2D
+J;94;IMAX
