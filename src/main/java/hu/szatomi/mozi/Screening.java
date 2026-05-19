@@ -4,7 +4,7 @@ public record Screening(int ID, String hallName, String title, int ticketsSold, 
 
     @Override
     public String toString() {
-        return "Terem: %s | %s - %d".formatted(hallName, title, ticketPrice);
+        return "Terem: %s | %s - %d Ft".formatted(hallName, title, ticketPrice);
     }
 }
 
