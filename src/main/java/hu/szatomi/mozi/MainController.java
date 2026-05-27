@@ -1,17 +1,13 @@
 package hu.szatomi.mozi;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Objects;
 
 public class MainController {
 
@@ -23,6 +19,8 @@ public class MainController {
     public Label maximumLabel;
     public Label minimumLabel;
     public Label incomeLabel;
+    public Button reportButton;
+
 
     private final ArrayList<Hall> halls = new ArrayList<>();
     private final ArrayList<Screening> screenings = new ArrayList<>();
@@ -31,7 +29,7 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        
+
         loadFile("termek");
         loadFile("vetitesek");
 
@@ -46,6 +44,8 @@ public class MainController {
         checkBox2D.selectedProperty().addListener(_ -> search(selectedHall));
         checkBox3D.selectedProperty().addListener(_ -> search(selectedHall));
         checkBoxIMAX.selectedProperty().addListener(_ -> search(selectedHall));
+
+        reportButton.setOnAction(_ -> export());
     }
 
     private void loadFile(String fileName) {
@@ -62,7 +62,7 @@ public class MainController {
             throw new RuntimeException(e);
         }
     }
-    
+
     private Hall parseHall(String line) {
 
         String[] data = line.split(";");
@@ -106,9 +106,23 @@ public class MainController {
         maximumLabel.setText(maximum() == null ?
                 "-" :
                 "%s - %d jegy eladva".formatted(minimum().title(), minimum().ticketsSold()));
-        minimumLabel.setText(minimum() == null ?
+        minimumLabel.setText(minimum() == null || minimum().ticketsSold() >= 10 ?
                 "-" :
                 "%s - %d jegy eldava".formatted(maximum().title(), maximum().ticketsSold()));
+        incomeLabel.setText("Bevétel: %d Ft".formatted(calculateIncome(selectedHall)));
+
+        if (resultList.getItems().isEmpty()) reportButton.setDisable(true);
+        else reportButton.setDisable(false);
+
+        if (!hallName.equals("Összes")) {
+            checkBox2D.setDisable(true);
+            checkBox3D.setDisable(true);
+            checkBoxIMAX.setDisable(true);
+        } else {
+            checkBox2D.setDisable(false);
+            checkBox3D.setDisable(false);
+            checkBoxIMAX.setDisable(false);
+        }
     }
 
     private Hall getHall(Screening screening) {
@@ -127,10 +141,42 @@ public class MainController {
     private Screening minimum() {
 
         return screenings.stream()
-                .filter(s -> (selectedHall.equals("Összes") || s.hallName().equals(selectedHall)) &&
-                        s.ticketsSold() < 10)
+                .filter(s -> (selectedHall.equals("Összes") || s.hallName().equals(selectedHall)))
                 .sorted(Comparator.comparingInt(Screening::ticketsSold))
                 .toList()
                 .getFirst();
+    }
+
+    private int calculateIncome(String hallName) {
+
+        return screenings.stream()
+                .filter(s -> s.hallName().equals(hallName))
+                .map(s -> s.ticketPrice() * s.ticketsSold())
+                .mapToInt(Integer::intValue).sum();
+    }
+
+    private void export() {
+
+        try {
+
+            LocalDateTime currentTime = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+            String formattedTime = currentTime.format(formatter);
+            String simpleFormattedTime = formattedTime.replace(" ", "-").replace(":", "-");
+
+            BufferedWriter writer = new BufferedWriter(new FileWriter("export_%s.txt".formatted(simpleFormattedTime)));
+
+            writer.write("Exportálás időpontja: %s%n%n".formatted(formattedTime));
+
+            for(Screening s : resultList.getItems()) {
+                writer.write(s.toString() + "\n");
+            }
+
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

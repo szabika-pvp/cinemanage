@@ -49,7 +49,7 @@
                         </VBox>
                         <VBox prefWidth="100.0">
                            <children>
-                              <Label text="Legkisebb nézettségű">
+                              <Label text="Kevesebb mint 10 jegy eladva">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
