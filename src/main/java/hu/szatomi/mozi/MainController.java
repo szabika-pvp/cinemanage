@@ -248,13 +248,19 @@ public class MainController {
             String formattedTime = currentTime.format(formatter);
             String simpleFormattedTime = formattedTime.replace(" ", "-").replace(":", "-");
 
-            BufferedWriter writer = new BufferedWriter(new FileWriter("export_%s.txt".formatted(simpleFormattedTime)));
+            String fileName = "export_%s.txt".formatted(simpleFormattedTime);
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
 
             writer.write("Exportálás időpontja: %s%n%n".formatted(formattedTime));
 
             for(Screening s : resultList.getItems()) {
                 writer.write(s.toString() + "\n");
             }
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Sikeres exportálás");
+            alert.setHeaderText("A jelentést sikeresen elmentettük \"%s\" fájlnéven".formatted(fileName));
+            alert.show();
 
             writer.close();
 
@@ -265,6 +271,7 @@ public class MainController {
 
     private void showError(Exception e, String title) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Hiba");
         alert.setHeaderText(title);
         alert.setContentText(e.getMessage());
         alert.showAndWait();
