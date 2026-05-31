@@ -30,7 +30,14 @@
             <CheckBox fx:id="checkBox3D" layoutX="142.0" layoutY="52.0" mnemonicParsing="false" text="3D"/>
             <CheckBox fx:id="checkBoxIMAX" layoutX="142.0" layoutY="60.0" mnemonicParsing="false" text="IMAX"/>
          </VBox>
-         <ComboBox fx:id="hallChoice" prefWidth="280.0" promptText="Terem"/>
+         <VBox>
+            <Label text="Terem">
+               <font>
+                  <Font name="System Bold" size="14.0"/>
+               </font>
+            </Label>
+            <ComboBox fx:id="hallChoice" prefWidth="280.0" promptText="Terem"/>
+         </VBox>
          <VBox spacing="10.0">
             <VBox prefWidth="100.0">
                <Label text="Legnépszerűbb">
@@ -38,7 +45,7 @@
                      <Font name="System Bold" size="14.0"/>
                   </font>
                </Label>
-               <Label fx:id="maximumLabel" layoutX="10.0" layoutY="10.0" text="Nigga: A felkelés"/>
+               <Label fx:id="maximumLabel" layoutX="10.0" layoutY="10.0" text="-"/>
             </VBox>
             <VBox prefWidth="100.0">
                <Label text="Kevesebb mint 10 jegy eladva">
@@ -46,7 +53,7 @@
                      <Font name="System Bold" size="14.0"/>
                   </font>
                </Label>
-               <Label fx:id="minimumLabel" layoutX="10.0" layoutY="10.0" text="Nigga: A felkelés"/>
+               <Label fx:id="minimumLabel" layoutX="10.0" layoutY="10.0" text="-"/>
             </VBox>
          </VBox>
          <Label fx:id="incomeLabel" text="Bevétel: 67 Ft">
